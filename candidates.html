@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة المرشحين - منصة قرار</title>
+    
+    <!-- الخطوط والأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+
+/* Footer Fix */
+.bg-footer {
+  background-color: #004d4b;
+}
+
+/* عنوان الفوتر */
+.footer-border-title {
+  border-right: 4px solid white;
+  padding-right: 12px;
+  font-weight: bold;
+}
+
+/* تحسين الفوتر */
+footer {
+  direction: rtl;
+}
+
+/* تحسين النصوص */
+footer p {
+  line-height: 1.8;
+}
+
+/* تحسين القوائم */
+footer ul li {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+footer ul li:hover {
+  opacity: 1;
+  transform: translateX(-5px);
+}
+
+/* تحسين الزر */
+footer button {
+  transition: 0.3s;
+}
+
+footer button:hover {
+  transform: scale(1.05);
+}
+
+/* تحسين الانبوت */
+footer input:focus {
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.3);
+}
+
+
+        body { font-family: 'Tajawal', sans-serif; background-color: #f9fafb; }
+        .bg-teal-main { background-color: #00797d; }
+        .text-teal-main { color: #00797d; }
+        .bg-footer-dark { background-color: #004d4d; }
+.hero-section{
+    background:url("img/step1 (2).jpeg") center/cover no-repeat;
+    position:relative;
+    min-height:400px;
+    height:55vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.hero-banner{
+
+    background:rgba(0,121,125,.88);
+
+    color:#fff;
+
+    padding:20px 90px 20px 40px;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    position:absolute;
+
+    right:0;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border-radius:20px 0 0 20px;
+
+    min-width:430px;
+
+}
+
+      .search-bar-container{
+
+display:flex;
+
+align-items:center;
+
+background:#fff;
+
+border:1px solid #e5e7eb;
+
+border-radius:16px;
+
+overflow:hidden;
+
+max-width:950px;
+
+margin:auto;
+
+box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.search-input{
+
+flex:1;
+
+padding:16px 20px;
+
+border:none;
+
+outline:none;
+
+font-size:15px;
+
+}
+
+.filter-select{
+
+padding:0 16px;
+
+border:none;
+
+border-right:1px solid #ececec;
+
+background:#fff;
+
+height:58px;
+
+font-size:14px;
+
+}
+
+.search-btn{
+
+background:#006967;
+
+color:#fff;
+
+padding:0 30px;
+
+height:58px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.search-btn:hover{
+
+background:#004d4b;
+
+}
+
+        .candidate-card {
+            background: white; border: 1px solid #f0f0f0; border-radius: 12px; overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .candidate-card:hover { transform: translateY(-5px); box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1); }
+
+        .divider-title {
+            display: flex; align-items: center; text-align: center; color: #a0aec0; font-size: 12px; font-weight: bold; margin: 50px 0;
+        }
+        .divider-title::before, .divider-title::after { content: ''; flex: 1; border-bottom: 1px solid #e2e8f0; }
+        .divider-title:not(:empty)::before { margin-left: .50em; }
+        .divider-title:not(:empty)::after { margin-right: .50em; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fadeIn { animation: fadeIn 0.5s ease forwards; }
+        @media(max-width:992px){
+
+.hero-banner{
+
+min-width:330px;
+
+padding:18px 60px 18px 30px;
+
+font-size:1.7rem;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-section{
+
+height:300px;
+
+}
+
+.hero-banner{
+
+position:relative;
+
+top:auto;
+
+right:auto;
+
+transform:none;
+
+width:90%;
+
+min-width:auto;
+
+margin:auto;
+
+padding:18px;
+
+text-align:center;
+
+border-radius:18px;
+
+font-size:1.5rem;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-section{
+
+height:240px;
+
+}
+
+.hero-banner{
+
+font-size:1.25rem;
+
+padding:16px;
+
+}
+
+}
+@media(max-width:768px){
+
+.search-bar-container{
+
+flex-direction:column;
+
+padding:18px;
+
+gap:15px;
+
+}
+
+.search-input{
+
+width:100%;
+
+border:1px solid #eee;
+
+border-radius:12px;
+
+}
+
+.filter-select{
+
+width:100%;
+
+border:1px solid #eee;
+
+border-radius:12px;
+
+height:52px;
+
+}
+
+.search-btn{
+
+width:100%;
+
+border-radius:12px;
+
+height:52px;
+
+}
+
+}
+    </style>
+</head>
+<body>
+
+   <header class="bg-white border-b py-3 sticky top-0 z-50 shadow-sm">
+
+    <div class="container mx-auto px-4 md:px-10 flex justify-between items-center">
+
+        <div class="flex items-center gap-10">
+
+            <img src="img/log.png" alt="Logo" class="h-12 object-contain">
+
+            <nav class="hidden lg:flex gap-8 text-gray-600 font-bold">
+
+                <a href="index.html" class="hover:text-[#006967] transition">الرئيسية</a>
+
+                <a href="polling.html" class="hover:text-[#006967] transition">مركز الاقتراع</a>
+
+                <a href="candidates.html" class="border-b-2 border-[#006967] pb-1 text-[#006967]">
+                    المرشحون
+                </a>
+
+                <a href="volanteer.html" class="hover:text-[#006967] transition">التطوع</a>
+
+                <a href="result.html" class="hover:text-[#006967] transition">النتائج</a>
+
+            </nav>
+
+        </div>
+
+        <div class="hidden lg:flex items-center gap-4">
+
+            <a href="polling-officer.html2.html"
+               class="border border-[#006967] text-[#006967] px-5 py-2 rounded-xl font-bold text-sm hover:bg-[#006967] hover:text-white transition">
+                ابدأ جلسة التصويت
+            </a>
+
+            <a href="Login.html"
+               class="text-[#006967] font-bold text-sm hover:underline">
+                منصة الموظفين
+            </a>
+
+        </div>
+
+        <button id="menuBtn"
+                class="lg:hidden text-3xl text-[#006967]">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+    </div>
+
+    <div id="mobileMenu"
+         class="hidden lg:hidden bg-white border-t shadow-lg">
+
+        <div class="flex flex-col p-5 gap-5 font-bold">
+
+            <a href="index.html">الرئيسية</a>
+
+            <a href="polling.html">مركز الاقتراع</a>
+
+            <a href="candidates.html">المرشحون</a>
+
+            <a href="volanteer.html">التطوع</a>
+
+            <a href="result.html">النتائج</a>
+
+            <hr>
+
+            <a href="polling-officer.html2.html"
+               class="border border-[#006967] text-[#006967] rounded-xl py-3 text-center">
+                ابدأ جلسة التصويت
+            </a>
+
+            <a href="Login.html"
+               class="bg-[#006967] text-white rounded-xl py-3 text-center">
+                منصة الموظفين
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <section class="hero-section">
+        <div class="hero-banner">قائمة المرشحين</div>
+    </section>
+
+    <!-- البحث والفلترة -->
+<section class="max-w-6xl mx-auto py-12 md:py-16 px-4 text-center">
+       <h2 class="text-[#005a5d] text-3xl md:text-4xl font-black mb-4">تعرف على المرشحين في دائرتك</h2>
+       <p class="text-gray-500 text-base md:text-lg mb-8">ستعرض قائمة المرشحين وتعرف على برامجهم الانتخابية قبل الإدلاء بصوتك</p>
+        
+        <div class="search-bar-container">
+            <div class="search-btn" id="searchTrigger"><i class="fas fa-search"></i> <span class="mr-2">ابحث</span></div>
+            <input type="text" id="nameInput" class="search-input" placeholder="ابحث عن اسم المرشح أو القائمة...">
+            
+            <!-- القائمة المحدثة حسب الصورة -->
+            <select id="districtFilter" class="filter-select">
+                <option value="">الدائرة الانتخابية</option>
+                <option>العاصمة - الأولى</option>
+                <option>العاصمة - الثانية</option>
+                <option>العاصمة - الثالثة</option>
+                <option>اربد - الأولى</option>
+                <option>اربد - الثانية</option>
+                <option>البلقاء</option>
+                <option>الكرك</option>
+                <option>معان</option>
+                <option>المفرق</option>
+                <option>الطفيلة</option>
+                <option>جرش</option>
+                <option>عجلون</option>
+                <option>العقبة</option>
+                <option>بدو الشمال</option>
+                <option>بدو الوسط</option>
+                <option>بدو الجنوب</option>
+            </select>
+
+            <!-- القائمة المحدثة حسب الصورة -->
+            <select id="listFilter" class="filter-select border-none">
+                <option value="">القائمة الانتخابية</option>
+                <option>الأولى</option>
+                <option>الثانية</option>
+                <option>الثالثة</option>
+                <option>الرابعة</option>
+                <option>الخامسة</option>
+                <option>السادسة</option>
+                <option>السابعة</option>
+            </select>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto pb-20 px-6">
+        <div class="divider-title">جميع المرشحين</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="candidatesGrid"></div>
+        <div class="flex justify-center mt-16">
+            <button id="loadMoreBtn" class="bg-[#005a5d] text-white px-14 py-3 rounded-full font-bold text-sm shadow-xl hover:bg-[#004d4d] transition-all transform hover:scale-105">
+                عرض المزيد من المرشحين
+            </button>
+        </div>
+    </main>
+
+    <!-- المودال -->
+    <div id="programModal" class="hidden fixed inset-0 z-[100] bg-black/60 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-8 relative shadow-2xl animate-fadeIn">
+            <button onclick="closeModal()" class="absolute top-4 left-4 text-gray-400 hover:text-red-500 transition text-2xl">
+                <i class="fas fa-times-circle"></i>
+            </button>
+            <div class="text-center">
+                <div class="w-24 h-24 rounded-full border-4 border-teal-main mx-auto mb-4 overflow-hidden">
+                    <img src="img/step3.jpeg" class="w-full h-full object-cover">
+                </div>
+                <h3 id="modalName" class="text-2xl font-black text-gray-800 mb-1">اسم المرشح</h3>
+                <p id="modalInfo" class="text-teal-main font-bold text-sm mb-6"></p>
+                <div class="text-right border-t pt-6 h-64 overflow-y-auto">
+                    <h4 class="font-black text-[#005a5d] mb-4"><i class="fas fa-scroll ml-2"></i> البرنامج الانتخابي:</h4>
+                    <p id="modalText" class="text-gray-600 leading-relaxed text-sm"></p>
+                </div>
+                <button onclick="closeModal()" class="mt-8 bg-gray-100 text-gray-600 px-8 py-2 rounded-lg font-bold text-sm hover:bg-gray-200 transition">إغلاق</button>
+            </div>
+        </div>
+    </div>
+
+   
+    <script>
+        const allCandidates = [
+            { name: "فاطمة العبد الله", list: "الأولى", dist: "العاصمة - الأولى", program: "التركيز على تمكين الشباب والتحول الرقمي في المؤسسات الحكومية." },
+            { name: "أحمد الزعبي", list: "الثانية", dist: "اربد - الأولى", program: "تطوير القطاع الزراعي في الشمال وحماية حقوق صغار المزارعين." },
+            { name: "سارة الحويطات", list: "الثالثة", dist: "بدو الجنوب", program: "تحسين الخدمات الصحية في البادية ودعم السياحة الصحراوية." },
+            { name: "خالد بني هاني", list: "الأولى", dist: "اربد - الثانية", program: "مراجعة السياسات الضريبية وتعزيز الشفافية البرلمانية." },
+            { name: "منى الرواشدة", list: "الرابعة", dist: "الكرك", program: "تفعيل دور المرأة في المجالس المحلية وتحفيز الاستثمار في الجنوب." },
+            { name: "ياسين المناصير", list: "الخامسة", dist: "العاصمة - الثالثة", program: "حلول النقل العام الذكية وتحسين البنية التحتية في العاصمة." },
+            { name: "زيد الفايز", list: "الأولى", dist: "بدو الوسط", program: "توفير فرص عمل لأبناء البادية ودعم المشاريع الريفية." },
+            { name: "هيا المجالي", list: "الثانية", dist: "الكرك", program: "دعم التعليم المهني وربط الخريجين بسوق العمل المحلي." },
+            { name: "عمر قاسم", list: "السابعة", dist: "البلقاء", program: "حماية البيئة والموارد المائية وتطوير الخدمات السياحية في السلط." }
+        ];
+
+        let visibleCount = 6;
+        let filteredResults = [...allCandidates];
+
+        const grid = document.getElementById('candidatesGrid');
+        const loadBtn = document.getElementById('loadMoreBtn');
+
+        function render() {
+            grid.innerHTML = "";
+            const toShow = filteredResults.slice(0, visibleCount);
+            toShow.forEach(item => {
+                grid.innerHTML += `
+                <div class="candidate-card animate-fadeIn group">
+                    <div class="h-48 bg-gray-100 overflow-hidden relative">
+                        <img src="img/step3.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-black text-gray-800 mb-2">${item.name}</h4>
+                        <div class="flex items-center justify-center gap-2 text-teal-main mb-1">
+                            <i class="fas fa-users text-[10px]"></i> <span class="text-[11px] font-bold">قائمة ${item.list}</span>
+                        </div>
+                        <div class="flex items-center justify-center gap-2 text-gray-400 mb-6">
+                            <i class="fas fa-map-marker-alt text-[10px]"></i> <span class="text-[10px]">${item.dist}</span>
+                        </div>
+                        <button onclick="openModal('${item.name}')" class="w-full bg-[#00797d] text-white py-2.5 rounded-lg text-xs font-bold hover:bg-[#005a5d] transition shadow-md">عرض البرنامج الانتخابي</button>
+                    </div>
+                </div>`;
+            });
+            loadBtn.style.display = (visibleCount >= filteredResults.length) ? "none" : "block";
+        }
+
+        function filter() {
+            const name = document.getElementById('nameInput').value.toLowerCase();
+            const dist = document.getElementById('districtFilter').value;
+            const list = document.getElementById('listFilter').value;
+            filteredResults = allCandidates.filter(c => 
+                (c.name.includes(name) || c.list.includes(name)) && (dist === "" || c.dist === dist) && (list === "" || c.list === list)
+            );
+            visibleCount = 6; render();
+        }
+
+        function openModal(name) {
+            const c = allCandidates.find(x => x.name === name);
+            document.getElementById('modalName').innerText = c.name;
+            document.getElementById('modalInfo').innerText = `قائمة ${c.list} | ${c.dist}`;
+            document.getElementById('modalText').innerText = c.program;
+            document.getElementById('programModal').classList.remove('hidden');
+        }
+
+        function closeModal() { document.getElementById('programModal').classList.add('hidden'); }
+
+        loadBtn.addEventListener('click', () => { visibleCount += 3; render(); });
+        document.getElementById('nameInput').addEventListener('input', filter);
+        document.getElementById('districtFilter').addEventListener('change', filter);
+        document.getElementById('listFilter').addEventListener('change', filter);
+        document.getElementById('searchTrigger').addEventListener('click', filter);
+
+        render();
+    </script>
+
+ <!-- Footer -->
+<footer class="bg-footer text-white pt-12 pb-8">
+    <div class="container mx-auto px-4 lg:px-20">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
+            <div class="md:w-1/3 flex justify-start order-1">
+                <img src="img/log2 (2).png" alt="Logo Footer" class="h-24 object-contain">
+            </div>
+            <div class="md:w-2/3 order-2">
+                <p class="text-sm md:text-md opacity-100 leading-relaxed text-right md:text-left text-white">
+                    منصة رقمية تهدف إلى تعزيز الثقافة في الحملة الانتخابية من خلال توفير معلومات واضحة حول مركز الاقتراع ، المرشحين، ونتائج الانتخابات.
+                </p>
+            </div>
+        </div>
+
+        <hr class="border-white/10 mb-10">
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-right">
+            <div>
+                <h4 class="footer-border-title mb-6 text-lg">الخدمات</h4>
+                <ul class="space-y-4 text-sm opacity-80 text-white">
+                    <li>خطوات التصويت</li>
+                    <li>الأمان والشفافية</li>
+                    <li>مركز المساعدة</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-border-title mb-6 text-lg">روابط سريعة</h4>
+                <ul class="space-y-4 text-sm opacity-80 text-white">
+                    <li>الرئيسية</li>
+                    <li>مركز الاقتراع</li>
+                    <li>المرشحون</li>
+                    <li>النتائج</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-border-title mb-6 text-lg">المساعدة والدعم</h4>
+                <ul class="space-y-4 text-sm opacity-80 text-white">
+                    <li>الأسئلة الشائعة</li>
+                    <li>تواصل معنا</li>
+                    <li>سياسة الخصوصية</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-4 text-sm">ابحث عن مركز اقتراعك</h4>
+                <div class="flex flex-col gap-3">
+                    <input type="text" placeholder="أدخل رقمك الوطني" 
+                        class="p-3 rounded-xl text-gray-800 outline-none w-full bg-white shadow-sm text-sm">
+                    
+                    <button class="bg-white text-[#004d4b] font-bold py-2.5 px-8 rounded-full w-fit hover:bg-gray-100 transition shadow-md self-start text-xs">
+                        بحث الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-white/10 mt-16 mb-8">
+
+        <div class="text-center text-xs opacity-50">
+            <p>© 2024 منصة قرار - جميع الحقوق محفوظة</p>
+        </div>
+    </div>
+</footer>
+<script>
+  const links = document.querySelectorAll('nav a');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+
+    // شيل الـ active من الكل
+    link.classList.remove('border-b-2', 'border-[#006967]', 'pb-1');
+
+    // حدد الصفحة الحالية
+    if (href === currentPage || (href === "index.html" && currentPage === "")) {
+      link.classList.add('border-b-2', 'border-[#006967]', 'pb-1', 'text-teal-brand');
+    }
+  });
+</script>
+<script>
+
+const menuBtn=document.getElementById("menuBtn");
+
+const mobileMenu=document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click",()=>{
+
+mobileMenu.classList.toggle("hidden");
+
+menuBtn.innerHTML=mobileMenu.classList.contains("hidden")
+
+?'<i class="fas fa-bars"></i>'
+
+:'<i class="fas fa-times"></i>';
+
+});
+
+</script>
+
+</body>
+</html>
