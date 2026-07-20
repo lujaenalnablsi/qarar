@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>QARAR | تأكيد التصويت</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/vote.css">
+
+</head>
+
+<body>
+
+<!-- ===================================== -->
+<!-- HEADER -->
+<!-- ===================================== -->
+
+<header class="main-header">
+
+    <div class="header-left">
+
+        <div class="brand"
+             data-voice="منصة قرار للانتخابات الذكية">
+
+            <div class="brand-logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+            <div class="brand-text">
+
+                <h2>QARAR</h2>
+
+                <span>منصة الانتخابات الذكية</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="header-center">
+
+        <div class="privacy-status"
+             data-voice="وضع الخصوصية مفعل">
+
+            <span class="status-dot"></span>
+
+            <span>
+
+                وضع الخصوصية مفعل
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+        <div class="shield-icon">
+
+            <i class="fa-solid fa-shield"></i>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ===================================== -->
+
+<main class="page-container">
+
+<div class="background-circle"></div>
+
+<div class="background-circle-two"></div>
+
+<section class="confirm-section">
+
+<div class="confirm-card">
+
+<div class="confirm-icon">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+<h1 data-voice="تأكيد التصويت">
+
+تأكيد التصويت
+
+</h1>
+
+<p data-voice="يرجى مراجعة المعلومات التالية قبل تسجيل التصويت">
+
+يرجى مراجعة المعلومات التالية قبل تسجيل التصويت.
+
+</p>
+
+<!-- ===================================== -->
+
+<div class="summary-box">
+
+<div class="summary-title"
+
+data-voice="الجبهة المختارة">
+
+<i class="fa-solid fa-users"></i>
+
+<span>
+
+الجبهة المختارة
+
+</span>
+
+</div>
+
+<div id="frontName"
+
+class="front-name"
+
+data-voice="">
+
+...
+
+</div>
+
+</div>
+
+<!-- ===================================== -->
+
+<div class="summary-box">
+
+<div class="summary-title"
+
+data-voice="المرشحون المختارون">
+
+<i class="fa-solid fa-user-group"></i>
+
+<span>
+
+المرشحون المختارون
+
+</span>
+
+</div>
+
+<div id="candidateContainer"
+
+class="candidate-container">
+
+<!-- سيتم تعبئته من JavaScript -->
+
+</div>
+
+</div>
+<!-- ===================================== -->
+<!-- SECURITY -->
+<!-- ===================================== -->
+
+<div class="security-box"
+
+data-voice="سيتم تشفير صوتك بالكامل ولا يمكن لأي جهة معرفة اختيارك">
+
+    <div class="security-icon">
+
+        <i class="fa-solid fa-lock"></i>
+
+    </div>
+
+    <div>
+
+        <h3 data-voice="خصوصية كاملة">
+
+            خصوصية كاملة
+
+        </h3>
+
+        <p data-voice="سيتم تشفير صوتك بالكامل ولا يمكن لأي جهة معرفة اختيارك">
+
+            سيتم تشفير صوتك بالكامل ولا يمكن لأي جهة معرفة اختيارك.
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ===================================== -->
+<!-- BUTTONS -->
+<!-- ===================================== -->
+
+<div class="button-group">
+
+    <button
+
+        id="confirmBtn"
+
+        class="confirm-btn"
+
+        data-voice="تسجيل التصويت">
+
+        <i class="fa-solid fa-check"></i>
+
+        تسجيل التصويت
+
+    </button>
+
+    <button
+
+        class="back-btn"
+
+        onclick="history.back()"
+
+        data-voice="العودة للتعديل">
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+        العودة للتعديل
+
+    </button>
+
+</div>
+
+<!-- ===================================== -->
+<!-- STEPS -->
+<!-- ===================================== -->
+
+<div class="steps">
+
+    <div
+
+        class="step completed"
+
+        data-voice="الخطوة الأولى اختيار الجبهة">
+
+        <div class="circle">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+        <span>
+
+            اختيار الجبهة
+
+        </span>
+
+    </div>
+
+    <div class="line"></div>
+
+    <div
+
+        class="step completed"
+
+        data-voice="الخطوة الثانية اختيار المرشح">
+
+        <div class="circle">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+        <span>
+
+            اختيار المرشح
+
+        </span>
+
+    </div>
+
+    <div class="line"></div>
+
+    <div
+
+        class="step active"
+
+        data-voice="الخطوة الثالثة تأكيد التصويت">
+
+        <div class="circle">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        </div>
+
+        <span>
+
+            تأكيد التصويت
+
+        </span>
+
+    </div>
+
+</div>
+<!-- ===================================== -->
+<!-- END CARD -->
+<!-- ===================================== -->
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ===================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================== -->
+
+<script src="js/vote.js"></script>
+
+<script src="js/vote-voice.js"></script>
+
+<script>
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        if(window.privacyVoice){
+
+            privacyVoice.speak(
+
+                "مرحباً بك في صفحة تأكيد التصويت. قم بمراجعة الجبهة والمرشح المختار ثم اضغط على زر تسجيل التصويت."
+
+            );
+
+        }
+
+    },700);
+
+});
+
+</script>
+
+</body>
+
+</html>
