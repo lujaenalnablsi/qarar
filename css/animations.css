@@ -1,0 +1,422 @@
+/*======================================
+ANIMATIONS
+======================================*/
+
+@keyframes successPulse{
+
+    0%{
+
+        transform:scale(1);
+        box-shadow:
+        0 0 0 0 rgba(34,197,94,.35);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+        box-shadow:
+        0 0 0 18px rgba(34,197,94,0);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+        box-shadow:
+        0 0 0 0 rgba(34,197,94,0);
+
+    }
+
+}
+
+/*======================================
+CARD APPEAR
+======================================*/
+
+@keyframes cardAppear{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.main-card{
+
+    animation:cardAppear .8s ease;
+
+}
+
+/*======================================
+STEP ANIMATION
+======================================*/
+
+@keyframes stepGrow{
+
+    from{
+
+        transform:scale(.6);
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+        opacity:1;
+
+    }
+
+}
+
+.step{
+
+    animation:stepGrow .5s ease;
+
+}
+
+/*======================================
+SUCCESS ICON
+======================================*/
+
+.success-icon{
+
+    animation:
+    successPulse 2.5s infinite,
+    iconFloat 3s ease-in-out infinite;
+
+}
+
+/*======================================
+FLOAT
+======================================*/
+
+@keyframes iconFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================================
+BUTTON GLOW
+======================================*/
+
+@keyframes buttonGlow{
+
+    0%{
+
+        box-shadow:
+        0 15px 30px rgba(11,107,99,.15);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 18px 40px rgba(11,107,99,.35);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 15px 30px rgba(11,107,99,.15);
+
+    }
+
+}
+
+.continue-btn{
+
+    animation:buttonGlow 3s infinite;
+
+}
+
+/*======================================
+HOVER LIFT
+======================================*/
+
+.vote-card:hover{
+
+    animation:lift .35s forwards;
+
+}
+
+@keyframes lift{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+/*======================================
+ICON POP
+======================================*/
+
+.vote-card:hover .vote-icon{
+
+    animation:pop .35s;
+
+}
+
+@keyframes pop{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+/*======================================
+BADGE
+======================================*/
+
+.recommended{
+
+    animation:badgeFloat 2.2s infinite;
+
+}
+
+@keyframes badgeFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-4px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================================
+FADE IN
+======================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.vote-card:nth-child(1){
+
+    animation:fadeUp .8s ease;
+
+}
+
+.vote-card:nth-child(2){
+
+    animation:fadeUp 1s ease;
+
+}
+
+.privacy-box{
+
+    animation:fadeUp 1.15s ease;
+
+}
+
+.actions{
+
+    animation:fadeUp 1.3s ease;
+
+}
+
+/*======================================
+FOOTER
+======================================*/
+
+.footer{
+
+    animation:footerSlide .8s ease;
+
+}
+
+@keyframes footerSlide{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================================
+HEADER
+======================================*/
+
+.header{
+
+    animation:headerDrop .6s ease;
+
+}
+
+@keyframes headerDrop{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================================
+LINK
+======================================*/
+
+.back-link:hover i{
+
+    animation:arrowMove .6s infinite;
+
+}
+
+@keyframes arrowMove{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(-6px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*======================================
+PRIVACY ICONS
+======================================*/
+
+.privacy-item:hover i{
+
+    transform:rotate(10deg) scale(1.1);
+
+}
+
+/*======================================
+LOGOUT
+======================================*/
+
+.logout-btn:hover i{
+
+    transform:translateX(-5px);
+
+}
+
+/*======================================
+TRANSITIONS
+======================================*/
+
+.vote-card,
+.vote-icon,
+.radio,
+.footer-item,
+.back-link,
+.logout-btn,
+.employee-icon,
+.continue-btn,
+.privacy-item i{
+
+    transition:all .35s ease;
+
+}

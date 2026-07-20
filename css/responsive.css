@@ -1,0 +1,307 @@
+/* ===================================
+   Large Screens (1400px)
+=================================== */
+
+@media (max-width:1400px){
+
+    .container{
+        width:95%;
+    }
+
+    .main-card{
+        padding:40px;
+    }
+
+}
+
+/* ===================================
+   Laptop (1200px)
+=================================== */
+
+@media (max-width:1200px){
+
+    .vote-options{
+
+        grid-template-columns:1fr;
+        gap:25px;
+
+    }
+
+    .privacy-box{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .footer{
+
+        grid-template-columns:repeat(3,1fr);
+
+        row-gap:25px;
+
+    }
+
+}
+
+/* ===================================
+   Tablet (992px)
+=================================== */
+
+@media (max-width:992px){
+
+    .header{
+
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+
+    }
+
+    .header-left{
+
+        width:100%;
+        justify-content:space-between;
+        margin-bottom:20px;
+
+    }
+
+    .stepper{
+
+        overflow-x:auto;
+        justify-content:flex-start;
+        padding-bottom:15px;
+
+    }
+
+    .line{
+
+        width:70px;
+
+    }
+
+    .main-card{
+
+        padding:30px;
+
+    }
+
+    .success-area h1{
+
+        font-size:28px;
+
+    }
+
+    .section-title{
+
+        font-size:24px;
+
+    }
+
+}
+
+/* ===================================
+   Small Tablet (768px)
+=================================== */
+
+@media (max-width:768px){
+
+    .container{
+
+        width:94%;
+
+    }
+
+    .privacy-box{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .continue-btn{
+
+        width:100%;
+
+    }
+
+    .vote-card{
+
+        min-height:auto;
+
+        padding:35px 25px;
+
+    }
+
+    .success-icon{
+
+        width:80px;
+        height:80px;
+
+    }
+
+}
+
+/* ===================================
+   Mobile (576px)
+=================================== */
+
+@media (max-width:576px){
+
+    .header{
+
+        padding:15px;
+
+    }
+
+    .header-left{
+
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+    .logout-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .step{
+
+        min-width:130px;
+
+    }
+
+    .circle{
+
+        width:42px;
+        height:42px;
+
+    }
+
+    .line{
+
+        width:40px;
+
+    }
+
+    .success-area h1{
+
+        font-size:22px;
+
+    }
+
+    .success-area p{
+
+        font-size:15px;
+
+    }
+
+    .section-title{
+
+        font-size:20px;
+
+    }
+
+    .vote-card h3{
+
+        font-size:22px;
+
+    }
+
+    .vote-card p{
+
+        font-size:14px;
+
+    }
+
+    .vote-icon{
+
+        width:70px;
+        height:70px;
+
+    }
+
+    .vote-icon i{
+
+        font-size:28px;
+
+    }
+
+    .privacy-title{
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+    .privacy-item{
+
+        justify-content:center;
+
+        text-align:center;
+
+        flex-direction:column;
+
+    }
+
+    .footer{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .footer-item{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ===================================
+   Extra Small (400px)
+=================================== */
+
+@media (max-width:400px){
+
+    .main-card{
+
+        padding:20px;
+
+    }
+
+    .continue-btn{
+
+        height:56px;
+
+        font-size:16px;
+
+    }
+
+    .back-link{
+
+        font-size:15px;
+
+    }
+
+    .success-icon{
+
+        width:65px;
+        height:65px;
+
+        font-size:24px;
+
+    }
+
+}
